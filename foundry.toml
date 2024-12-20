@@ -1,0 +1,24 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["dependencies"]
+verbosity = 2
+ffi = true
+remappings = [
+    "forge-std/=dependencies/forge-std-1.9.4/src",
+    "@openzeppelin-contracts/=dependencies/@openzeppelin-contracts-5.1.0/",
+    "@openzeppelin-contracts-upgradeable/=dependencies/@openzeppelin-contracts-upgradeable-5.1.0/",
+    "@openzeppelin/contracts/=dependencies/@openzeppelin-contracts-5.1.0/",
+]
+
+[dependencies]
+forge-std = { version = "1.9.4" }
+"@openzeppelin-contracts" = { version = "5.1.0" }
+"@openzeppelin-contracts-upgradeable" = { version = "5.1.0" }
+
+[soldeer]
+remappings_generate = true
+remappings_version = false
+remappings_location = "config"
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
